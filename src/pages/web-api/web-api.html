@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Web Animations</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <h2>Hide/Show Content</h2>
+	
+    <button ion-button (click)="toggleVisibilityContent()">
+      {{hideorShow()}}
+    </button>
+    <div [@contentVisibility]="contentVisibility">
+      
+		<h2>Fade Text</h2>
+			
+		<button ion-button (click)="toggleVisibilityFade()">Fade Toggle</button>
+		
+		<div [@fadeVisibility]="fadeVisibility" >  
+		  <p>This is an example of Fade Text using AngularJS 2 Animation System</p>
+		</div>
+		
+		<h2>Random Animations</h2>
+		
+		<button [@bounce]="bounceState" ion-button (click)="toggleBounce()">Bounce!</button>
+		
+		<button [@pulse]="pulseState" ion-button (click)="togglePulse()">Pulse!</button>
+		
+		<button [@flip]="flipState" ion-button (click)="toggleFlip()">Flip!</button>
+		
+		<button [@flash]="flashState" ion-button (click)="toggleFlash()">Flash!</button>
+
+		<button [@fade]="fadeState" ion-button (click)="toggleFade()">Fade!</button>
+
+	</div>
+
+</ion-content>
